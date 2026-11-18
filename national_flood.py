@@ -14,7 +14,10 @@ from scipy.spatial import cKDTree
 
 from national_weather import Rain, Station
 
-GRID_DIR=Path(__file__).resolve().parent/'artifacts_national'
+_HERE=Path(__file__).resolve().parent
+# 폴더 구조가 있으면 artifacts_national/manifest.json, 한 곳에 모은 배포판이면 national_manifest.json
+GRID_DIR=_HERE/'artifacts_national' if (_HERE/'artifacts_national').is_dir() else _HERE
+MANIFEST_NAME='manifest.json' if GRID_DIR.name=='artifacts_national' else 'national_manifest.json'
 MATCH_RADIUS_M=30_000.0
 RAIN3_SCALE_MM=60.0
 RAIN12_SCALE_MM=110.0
@@ -65,7 +68,7 @@ def file_hash(path):
 
 def load_grid(path=GRID_DIR):
     root=Path(path)
-    m=json.loads((root/'manifest.json').read_text(encoding='utf-8'))
+    m=json.loads((root/MANIFEST_NAME).read_text(encoding='utf-8'))
     if m['resolution_m']!=1000 or m['land_check_m']!=200:
         raise ValueError('전국 격자의 해상도가 예상과 다릅니다.')
     p=root/'national_grid.npz'

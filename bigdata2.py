@@ -37,8 +37,9 @@ def _data_go_kr_key():
 API_KEY = _data_go_kr_key()
 
 BASE_DIR = Path(__file__).resolve().parent
-ARTIFACTS = BASE_DIR / "artifacts"      # 기존 3도시 100m 모델·격자·과거 ASOS
-EVIDENCE = BASE_DIR / "evidence"        # 연구 보고서의 검증표·그림
+# 폴더가 있으면 폴더에서, 없으면(파일을 한 곳에 모아 올린 배포판) 같은 위치에서 읽습니다.
+ARTIFACTS = BASE_DIR / "artifacts" if (BASE_DIR / "artifacts").is_dir() else BASE_DIR  # 3도시 100m 모델·격자·ASOS
+EVIDENCE = BASE_DIR / "evidence" if (BASE_DIR / "evidence").is_dir() else BASE_DIR     # 연구 보고서 검증표·그림
 
 # 2. 발표용 대상 지역 기본 데이터 (강릉, 인천, 거제)
 region_data = {
