@@ -1,0 +1,29 @@
+[
+  {
+    "city": "강릉",
+    "coarse_all": 1148,
+    "coarse_positive_all": 12,
+    "coarse_evaluated": 1041,
+    "coarse_positive_evaluated": 12,
+    "original_positive_in_evaluated": 167,
+    "original_positive": 167
+  },
+  {
+    "city": "거제",
+    "coarse_all": 598,
+    "coarse_positive_all": 42,
+    "coarse_evaluated": 412,
+    "coarse_positive_evaluated": 33,
+    "original_positive_in_evaluated": 314,
+    "original_positive": 355
+  },
+  {
+    "city": "인천",
+    "coarse_all": 967,
+    "coarse_positive_all": 36,
+    "coarse_evaluated": 595,
+    "coarse_positive_evaluated": 33,
+    "original_positive_in_evaluated": 260,
+    "original_positive": 279
+  }
+]

@@ -1,0 +1,784 @@
+{
+  "input_audit": {
+    "grid_rows": 207209,
+    "grid_cells_recorded": 801,
+    "city_counts": {
+      "강릉": [
+        104048,
+        167
+      ],
+      "거제": [
+        40979,
+        355
+      ],
+      "인천": [
+        62182,
+        279
+      ]
+    },
+    "flood_records_all": 255,
+    "flood_records_mapped_to_9b": 165,
+    "flood_records_exclusion_disjoint": {
+      "eligible": 111,
+      "no_9b_overlap": 90,
+      "unconfirmed_midnight": 28,
+      "no_complete_asos_row_window": 18,
+      "end_precedes_start": 3,
+      "invalid_date_or_time": 3,
+      "year_mismatch": 2
+    },
+    "flood_start_first": "2003-09-12 18:00:00+09:00",
+    "flood_start_last": "2022-08-16 22:00:00+09:00",
+    "rain_csv_files": 20,
+    "rain_source_rows_all_stations": 874142,
+    "archive_csv_identical_to_loose_files": true,
+    "weather_by_station": {
+      "105": {
+        "rows": 174831,
+        "first": "2006-09-01 00:00:00+09:00",
+        "last": "2026-08-31 00:00:00+09:00",
+        "rain_blank_or_invalid_rows": 159015
+      },
+      "112": {
+        "rows": 174839,
+        "first": "2006-09-01 00:00:00+09:00",
+        "last": "2026-08-31 00:00:00+09:00",
+        "rain_blank_or_invalid_rows": 158571
+      },
+      "294": {
+        "rows": 174799,
+        "first": "2006-09-01 00:00:00+09:00",
+        "last": "2026-08-31 00:00:00+09:00",
+        "rain_blank_or_invalid_rows": 159644
+      }
+    },
+    "wind_direction_files_not_used": [
+      {
+        "name": "OBS_ASOS_TIM_20261104153144.csv",
+        "rows": 43583,
+        "first": "2025-01-01 01:00",
+        "last": "2025-12-31 00:00"
+      },
+      {
+        "name": "OBS_ASOS_TIM_20261104153228.csv",
+        "rows": 43783,
+        "first": "2024-01-01 01:00",
+        "last": "2024-12-31 00:00"
+      }
+    ],
+    "static_lc_imagery_year": 2024,
+    "input_sha256": {
+      "9b": "248ea611f28981b0ebc5ab05ea23950464ebdeed8a154343b351b9e83afc7035",
+      "flood_labels": "b743590fefa7592a6a4f833b5feb1220ba7cc96de986338d4d6ad12067aafd72",
+      "ASOS_20060901-20070831.csv": "5252121bef2d2f6683b3769f184f678d427619740f8e36dff39375451ed99b95",
+      "ASOS_20070901-20080831.csv": "5b4fc55dd7f6f50048b29b61c9f0bff3fdf52ac1adc496c0ed89cbae3f84c673",
+      "ASOS_20080901-20090831.csv": "3a1b94fc9a172c5ea1f023f363047cbc880169dbe6459aff3147c17737900c9d",
+      "ASOS_20090901-20100831.csv": "05dccb383d79af3bd56ace0e2a9769394c5c3c3dacb45ef563b46027b9e62020",
+      "ASOS_20100901-20110831.csv": "3da7e3cd3cbfb8359f78791f25c0246908df42746565cc3613169a2a0f688001",
+      "ASOS_20110901-20120831.csv": "073747269853cf030a51dbfbc8edeb461618a05da02407e7a9300e648fd1d892",
+      "ASOS_20120901-20130831.csv": "4395ef3cd1747b48e6aae6f16dee73f62562e3fd448846be4a37a9d1a474ceeb",
+      "ASOS_20130901-20140831.csv": "034c0a50f51590eb195640713b8cdb4ff5bb39c3149857c000b31d5132c45ec5",
+      "ASOS_20140901-20150831.csv": "7944e504c249e127b1d10a45542d348dd674a1054b396b3d6f90896320857c2d",
+      "ASOS_20150901-20160831.csv": "c10dbb8c47c650218b0afd0f051fd063b4367547a3e79e6c8d78e83597d2f8f2",
+      "ASOS_20160901-20170831.csv": "b41eb01b6c75d49df77d841da8e10d37b69c807e62fbaf7f8c62ae8f3ec916dd",
+      "ASOS_20170901-20180831.csv": "ae77d5ae93f621bd14bf31098217a6c8e0a8909030cf3412dee046e096b81305",
+      "ASOS_20180901-20190831.csv": "c80be18c4d2dbefe4c393fbf3dfa0595956bf60b242ccc6da7c73b3bc93bf413",
+      "ASOS_20190901-20200831.csv": "d9a6b6f910dbc1a72e38ec19e00e5942c4699d16dde9608c7a833c8dfdb1b286",
+      "ASOS_20200901-20210831.csv": "bb2317606f08160a1d681c681f9b8b392058df74a648bd06b8d53658e8ce1391",
+      "ASOS_20210901-20220831.csv": "f32f74dd236a6fbfc693ae079212733340734782e0663aeeec1ef73b263fc5ea",
+      "ASOS_20220901-20230831.csv": "cbdf26ba1c29eb45df025af6d47070808d118a9283b38e4205fcdd0eb5f1b922",
+      "ASOS_20230901-20240831.csv": "484ae168c7cc778fa8d1d2a36ee48d92ff0181a5ef885d6cb0dcbd902bcfbaf0",
+      "ASOS_20240901-20250831.csv": "0f87bf5b9c8ec6aa503ea0e11b31618071e6c7735a4c72e301d54531ccb22af2",
+      "ASOS_20250901-20260831.csv": "292dda2305329bb9cc83743951e3f56faa69ea1b6d71e40713977f785045e097"
+    },
+    "spatial_match": "The EPSG:3857 interpretation exactly reproduces all 801 9B positives after reprojection to 5179. The originating provider's CRS was not independently certified.",
+    "weather_source": "Only project-folder KMA ASOS CSV; no external observations used for training.",
+    "station_map": {
+      "인천": 112,
+      "강릉": 105,
+      "거제": 294
+    }
+  },
+  "all_samples": 2223,
+  "positive_cell_hours": 247,
+  "unique_recorded_cells_used": 247,
+  "retained_flood_records_with_positive_cell_hours": 75,
+  "kind_counts": {
+    "spatial_unobserved": 1235,
+    "temporal_unobserved": 741,
+    "recorded_onset": 247
+  },
+  "storm_count": 9,
+  "development_storms": [
+    "S2009071610",
+    "S2010091110",
+    "S2012081511",
+    "S2012091707",
+    "S2013071303",
+    "S2019100303"
+  ],
+  "holdout_storms": [
+    "S2021082110",
+    "S2022080810",
+    "S2022081622"
+  ],
+  "holdout_rows": 594,
+  "development_rows_before_purge": 1629,
+  "development_rows_after_purge": 1629,
+  "controls": [
+    {
+      "city": "강릉",
+      "storm": "S2019100303",
+      "time": "2019-09-05 21:00:00+09:00",
+      "rain_observed_6h_mm": 12.400000005960464
+    },
+    {
+      "city": "강릉",
+      "storm": "S2019100303",
+      "time": "2019-09-11 21:00:00+09:00",
+      "rain_observed_6h_mm": 4.0
+    },
+    {
+      "city": "강릉",
+      "storm": "S2019100303",
+      "time": "2019-09-24 13:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "강릉",
+      "storm": "S2022081622",
+      "time": "2022-09-06 03:00:00+09:00",
+      "rain_observed_6h_mm": 49.0
+    },
+    {
+      "city": "강릉",
+      "storm": "S2022081622",
+      "time": "2022-09-04 09:00:00+09:00",
+      "rain_observed_6h_mm": 1.8000000268220901
+    },
+    {
+      "city": "강릉",
+      "storm": "S2022081622",
+      "time": "2022-09-02 02:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "거제",
+      "storm": "S2009071610",
+      "time": "2009-08-11 15:00:00+09:00",
+      "rain_observed_6h_mm": 17.0
+    },
+    {
+      "city": "거제",
+      "storm": "S2009071610",
+      "time": "2009-08-12 22:00:00+09:00",
+      "rain_observed_6h_mm": 4.0
+    },
+    {
+      "city": "거제",
+      "storm": "S2009071610",
+      "time": "2009-07-22 18:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "거제",
+      "storm": "S2010091110",
+      "time": "2010-09-02 13:00:00+09:00",
+      "rain_observed_6h_mm": 62.0
+    },
+    {
+      "city": "거제",
+      "storm": "S2010091110",
+      "time": "2010-09-03 14:00:00+09:00",
+      "rain_observed_6h_mm": 1.0
+    },
+    {
+      "city": "거제",
+      "storm": "S2010091110",
+      "time": "2010-10-07 10:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "거제",
+      "storm": "S2012091707",
+      "time": "2012-09-10 13:00:00+09:00",
+      "rain_observed_6h_mm": 6.5
+    },
+    {
+      "city": "거제",
+      "storm": "S2012091707",
+      "time": "2012-09-05 08:00:00+09:00",
+      "rain_observed_6h_mm": 2.5
+    },
+    {
+      "city": "거제",
+      "storm": "S2012091707",
+      "time": "2012-10-13 00:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "거제",
+      "storm": "S2021082110",
+      "time": "2021-09-14 06:00:00+09:00",
+      "rain_observed_6h_mm": 8.399999894201756
+    },
+    {
+      "city": "거제",
+      "storm": "S2021082110",
+      "time": "2021-09-06 15:00:00+09:00",
+      "rain_observed_6h_mm": 0.5000000074505806
+    },
+    {
+      "city": "거제",
+      "storm": "S2021082110",
+      "time": "2021-07-25 08:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "인천",
+      "storm": "S2012081511",
+      "time": "2012-08-20 07:00:00+09:00",
+      "rain_observed_6h_mm": 42.70000076293945
+    },
+    {
+      "city": "인천",
+      "storm": "S2012081511",
+      "time": "2012-07-30 19:00:00+09:00",
+      "rain_observed_6h_mm": 0.6000000238418579
+    },
+    {
+      "city": "인천",
+      "storm": "S2012081511",
+      "time": "2012-07-29 08:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "인천",
+      "storm": "S2013071303",
+      "time": "2013-07-23 17:00:00+09:00",
+      "rain_observed_6h_mm": 25.300000190734863
+    },
+    {
+      "city": "인천",
+      "storm": "S2013071303",
+      "time": "2013-07-02 21:00:00+09:00",
+      "rain_observed_6h_mm": 2.600000023841858
+    },
+    {
+      "city": "인천",
+      "storm": "S2013071303",
+      "time": "2013-08-01 13:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "인천",
+      "storm": "S2021082110",
+      "time": "2021-09-07 02:00:00+09:00",
+      "rain_observed_6h_mm": 10.300000064074993
+    },
+    {
+      "city": "인천",
+      "storm": "S2021082110",
+      "time": "2021-08-17 18:00:00+09:00",
+      "rain_observed_6h_mm": 2.5999999046325684
+    },
+    {
+      "city": "인천",
+      "storm": "S2021082110",
+      "time": "2021-09-14 08:00:00+09:00",
+      "rain_observed_6h_mm": null
+    },
+    {
+      "city": "인천",
+      "storm": "S2022080810",
+      "time": "2022-08-03 07:00:00+09:00",
+      "rain_observed_6h_mm": 48.90000167489052
+    },
+    {
+      "city": "인천",
+      "storm": "S2022080810",
+      "time": "2022-08-02 12:00:00+09:00",
+      "rain_observed_6h_mm": 0.30000001192092896
+    },
+    {
+      "city": "인천",
+      "storm": "S2022080810",
+      "time": "2022-07-28 16:00:00+09:00",
+      "rain_observed_6h_mm": null
+    }
+  ],
+  "metrics": [
+    {
+      "algorithm": "RF",
+      "feature_set": "static",
+      "n_features": 11,
+      "dev_cv_storm_macro_ap": 0.21185802706469337,
+      "holdout": {
+        "all": {
+          "ap": 0.18355263458650561,
+          "roc_auc": 0.6863234618916437,
+          "rows": 594,
+          "positive": 66
+        },
+        "storm_macro_ap": 0.19394352656437377,
+        "per_storm": {
+          "S2021082110": {
+            "ap": 0.19701522813006914,
+            "roc_auc": 0.7254464285714286,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022080810": {
+            "ap": 0.1918411476884909,
+            "roc_auc": 0.7090242346938775,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022081622": {
+            "ap": 0.19297420387456138,
+            "roc_auc": 0.7224999999999999,
+            "rows": 90,
+            "positive": 10
+          }
+        },
+        "per_city": {
+          "강릉": {
+            "ap": 0.19297420387456138,
+            "roc_auc": 0.7224999999999999,
+            "rows": 90,
+            "positive": 10
+          },
+          "거제": {
+            "ap": 0.22317723128688105,
+            "roc_auc": 0.7803819444444444,
+            "rows": 108,
+            "positive": 12
+          },
+          "인천": {
+            "ap": 0.18896835164196812,
+            "roc_auc": 0.6968620867768595,
+            "rows": 396,
+            "positive": 44
+          }
+        },
+        "event_hour_spatial": {
+          "ap": 0.43180422145413677,
+          "roc_auc": 0.79811753902663,
+          "rows": 396,
+          "positive": 66
+        },
+        "recorded_location_time": {
+          "ap": 0.25,
+          "roc_auc": 0.5,
+          "rows": 264,
+          "positive": 66
+        }
+      }
+    },
+    {
+      "algorithm": "RF",
+      "feature_set": "rain",
+      "n_features": 19,
+      "dev_cv_storm_macro_ap": 0.4670511985948671,
+      "holdout": {
+        "all": {
+          "ap": 0.12162223901349423,
+          "roc_auc": 0.506198347107438,
+          "rows": 594,
+          "positive": 66
+        },
+        "storm_macro_ap": 0.14024617215657278,
+        "per_storm": {
+          "S2021082110": {
+            "ap": 0.10803852938218231,
+            "roc_auc": 0.4980070153061225,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022080810": {
+            "ap": 0.13513480781957038,
+            "roc_auc": 0.5023118622448979,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022081622": {
+            "ap": 0.17756517926796567,
+            "roc_auc": 0.665,
+            "rows": 90,
+            "positive": 10
+          }
+        },
+        "per_city": {
+          "강릉": {
+            "ap": 0.17756517926796567,
+            "roc_auc": 0.665,
+            "rows": 90,
+            "positive": 10
+          },
+          "거제": {
+            "ap": 0.1403542021316862,
+            "roc_auc": 0.5881076388888888,
+            "rows": 108,
+            "positive": 12
+          },
+          "인천": {
+            "ap": 0.12353034606493571,
+            "roc_auc": 0.47498063016528924,
+            "rows": 396,
+            "positive": 44
+          }
+        },
+        "event_hour_spatial": {
+          "ap": 0.20537670458856153,
+          "roc_auc": 0.5391414141414141,
+          "rows": 396,
+          "positive": 66
+        },
+        "recorded_location_time": {
+          "ap": 0.24306695530914402,
+          "roc_auc": 0.4512932353841444,
+          "rows": 264,
+          "positive": 66
+        }
+      }
+    },
+    {
+      "algorithm": "RF",
+      "feature_set": "weather",
+      "n_features": 25,
+      "dev_cv_storm_macro_ap": 0.5431383783503745,
+      "holdout": {
+        "all": {
+          "ap": 0.15490965654668531,
+          "roc_auc": 0.6165203168044077,
+          "rows": 594,
+          "positive": 66
+        },
+        "storm_macro_ap": 0.2626433215496073,
+        "per_storm": {
+          "S2021082110": {
+            "ap": 0.14067792747735408,
+            "roc_auc": 0.6489955357142857,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022080810": {
+            "ap": 0.17826073967953104,
+            "roc_auc": 0.6497130102040817,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022081622": {
+            "ap": 0.4689912974919368,
+            "roc_auc": 0.7799999999999999,
+            "rows": 90,
+            "positive": 10
+          }
+        },
+        "per_city": {
+          "강릉": {
+            "ap": 0.4689912974919368,
+            "roc_auc": 0.7799999999999999,
+            "rows": 90,
+            "positive": 10
+          },
+          "거제": {
+            "ap": 0.22703694294741378,
+            "roc_auc": 0.7951388888888888,
+            "rows": 108,
+            "positive": 12
+          },
+          "인천": {
+            "ap": 0.15689146371758123,
+            "roc_auc": 0.5870674070247934,
+            "rows": 396,
+            "positive": 44
+          }
+        },
+        "event_hour_spatial": {
+          "ap": 0.26895782265273643,
+          "roc_auc": 0.6854912764003673,
+          "rows": 396,
+          "positive": 66
+        },
+        "recorded_location_time": {
+          "ap": 0.2733370187304488,
+          "roc_auc": 0.5015687174778083,
+          "rows": 264,
+          "positive": 66
+        }
+      }
+    },
+    {
+      "algorithm": "XGBoost",
+      "feature_set": "static",
+      "n_features": 11,
+      "dev_cv_storm_macro_ap": 0.22455764089707828,
+      "holdout": {
+        "all": {
+          "ap": 0.19232767850058216,
+          "roc_auc": 0.7006140955004592,
+          "rows": 594,
+          "positive": 66
+        },
+        "storm_macro_ap": 0.2023194899282065,
+        "per_storm": {
+          "S2021082110": {
+            "ap": 0.2103820475983744,
+            "roc_auc": 0.7389987244897959,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022080810": {
+            "ap": 0.19091984337155452,
+            "roc_auc": 0.6997767857142857,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022081622": {
+            "ap": 0.20565657881469068,
+            "roc_auc": 0.7575,
+            "rows": 90,
+            "positive": 10
+          }
+        },
+        "per_city": {
+          "강릉": {
+            "ap": 0.20565657881469068,
+            "roc_auc": 0.7575,
+            "rows": 90,
+            "positive": 10
+          },
+          "거제": {
+            "ap": 0.2306530755037192,
+            "roc_auc": 0.787326388888889,
+            "rows": 108,
+            "positive": 12
+          },
+          "인천": {
+            "ap": 0.191764357386587,
+            "roc_auc": 0.6916967975206612,
+            "rows": 396,
+            "positive": 44
+          }
+        },
+        "event_hour_spatial": {
+          "ap": 0.485928752211417,
+          "roc_auc": 0.8209825528007346,
+          "rows": 396,
+          "positive": 66
+        },
+        "recorded_location_time": {
+          "ap": 0.25,
+          "roc_auc": 0.5,
+          "rows": 264,
+          "positive": 66
+        }
+      }
+    },
+    {
+      "algorithm": "XGBoost",
+      "feature_set": "rain",
+      "n_features": 19,
+      "dev_cv_storm_macro_ap": 0.5136387264201151,
+      "holdout": {
+        "all": {
+          "ap": 0.1541568982838717,
+          "roc_auc": 0.6275396005509641,
+          "rows": 594,
+          "positive": 66
+        },
+        "storm_macro_ap": 0.19138182677650661,
+        "per_storm": {
+          "S2021082110": {
+            "ap": 0.1995603855666571,
+            "roc_auc": 0.6988998724489796,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022080810": {
+            "ap": 0.16275501952076676,
+            "roc_auc": 0.5942283163265306,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022081622": {
+            "ap": 0.21183007524209602,
+            "roc_auc": 0.7625,
+            "rows": 90,
+            "positive": 10
+          }
+        },
+        "per_city": {
+          "강릉": {
+            "ap": 0.21183007524209602,
+            "roc_auc": 0.7625,
+            "rows": 90,
+            "positive": 10
+          },
+          "거제": {
+            "ap": 0.22081436416868874,
+            "roc_auc": 0.7491319444444445,
+            "rows": 108,
+            "positive": 12
+          },
+          "인천": {
+            "ap": 0.1523649537850228,
+            "roc_auc": 0.5890689566115702,
+            "rows": 396,
+            "positive": 44
+          }
+        },
+        "event_hour_spatial": {
+          "ap": 0.28792344008185544,
+          "roc_auc": 0.7056473829201102,
+          "rows": 396,
+          "positive": 66
+        },
+        "recorded_location_time": {
+          "ap": 0.2519705593537698,
+          "roc_auc": 0.49735996326905413,
+          "rows": 264,
+          "positive": 66
+        }
+      }
+    },
+    {
+      "algorithm": "XGBoost",
+      "feature_set": "weather",
+      "n_features": 25,
+      "dev_cv_storm_macro_ap": 0.4618145844841722,
+      "holdout": {
+        "all": {
+          "ap": 0.18380759428984264,
+          "roc_auc": 0.6586891643709825,
+          "rows": 594,
+          "positive": 66
+        },
+        "storm_macro_ap": 0.2258214745495434,
+        "per_storm": {
+          "S2021082110": {
+            "ap": 0.22292964306292778,
+            "roc_auc": 0.7506377551020409,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022080810": {
+            "ap": 0.2218497203884472,
+            "roc_auc": 0.6669323979591837,
+            "rows": 252,
+            "positive": 28
+          },
+          "S2022081622": {
+            "ap": 0.23268506019725532,
+            "roc_auc": 0.7875,
+            "rows": 90,
+            "positive": 10
+          }
+        },
+        "per_city": {
+          "강릉": {
+            "ap": 0.23268506019725532,
+            "roc_auc": 0.7875,
+            "rows": 90,
+            "positive": 10
+          },
+          "거제": {
+            "ap": 0.533913112028437,
+            "roc_auc": 0.8715277777777778,
+            "rows": 108,
+            "positive": 12
+          },
+          "인천": {
+            "ap": 0.19284697393120673,
+            "roc_auc": 0.6350077479338844,
+            "rows": 396,
+            "positive": 44
+          }
+        },
+        "event_hour_spatial": {
+          "ap": 0.2893172030959474,
+          "roc_auc": 0.720615243342516,
+          "rows": 396,
+          "positive": 66
+        },
+        "recorded_location_time": {
+          "ap": 0.34774618791472256,
+          "roc_auc": 0.55547903275176,
+          "rows": 264,
+          "positive": 66
+        }
+      }
+    }
+  ],
+  "selected": {
+    "algorithm": "RF",
+    "feature_set": "weather",
+    "n_features": 25,
+    "dev_cv_storm_macro_ap": 0.5431383783503745,
+    "holdout": {
+      "all": {
+        "ap": 0.15490965654668531,
+        "roc_auc": 0.6165203168044077,
+        "rows": 594,
+        "positive": 66
+      },
+      "storm_macro_ap": 0.2626433215496073,
+      "per_storm": {
+        "S2021082110": {
+          "ap": 0.14067792747735408,
+          "roc_auc": 0.6489955357142857,
+          "rows": 252,
+          "positive": 28
+        },
+        "S2022080810": {
+          "ap": 0.17826073967953104,
+          "roc_auc": 0.6497130102040817,
+          "rows": 252,
+          "positive": 28
+        },
+        "S2022081622": {
+          "ap": 0.4689912974919368,
+          "roc_auc": 0.7799999999999999,
+          "rows": 90,
+          "positive": 10
+        }
+      },
+      "per_city": {
+        "강릉": {
+          "ap": 0.4689912974919368,
+          "roc_auc": 0.7799999999999999,
+          "rows": 90,
+          "positive": 10
+        },
+        "거제": {
+          "ap": 0.22703694294741378,
+          "roc_auc": 0.7951388888888888,
+          "rows": 108,
+          "positive": 12
+        },
+        "인천": {
+          "ap": 0.15689146371758123,
+          "roc_auc": 0.5870674070247934,
+          "rows": 396,
+          "positive": 44
+        }
+      },
+      "event_hour_spatial": {
+        "ap": 0.26895782265273643,
+        "roc_auc": 0.6854912764003673,
+        "rows": 396,
+        "positive": 66
+      },
+      "recorded_location_time": {
+        "ap": 0.2733370187304488,
+        "roc_auc": 0.5015687174778083,
+        "rows": 264,
+        "positive": 66
+      }
+    }
+  },
+  "target": "Historical recorded onset in the issue hour versus sampled unobserved background.",
+  "vintage": "Retrospective research with 2024 land cover on older labels; not an as-of-date forecast validation.",
+  "guard": "Whole-storm holdout; near-clock training examples within 48h removed; train locations within 200m of held-out positives removed."
+}

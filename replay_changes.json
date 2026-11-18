@@ -1,0 +1,16 @@
+[
+  {
+    "time_kst": "2022-06-15T10:00:00+09:00",
+    "cells_with_rain": 2076,
+    "base_percentile_at_station": 93.6407699584961,
+    "research_index_at_station": 14.897395133972168,
+    "area_name": "인천광역시 제물포구"
+  },
+  {
+    "time_kst": "2022-08-08T23:00:00+09:00",
+    "cells_with_rain": 2076,
+    "base_percentile_at_station": 93.6407699584961,
+    "research_index_at_station": 93.6407699584961,
+    "area_name": "인천광역시 제물포구"
+  }
+]
